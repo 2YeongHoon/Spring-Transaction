@@ -1,5 +1,7 @@
 package hello.springtx;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.sql.DataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -76,6 +78,16 @@ public class BasicTxTest {
     txManager.commit(inner);
     log.info("외부 트랜잭션 커밋");
     txManager.commit(outer);
+  }
+
+  @Test
+  void tests() {
+    String myString = "oxooxoxxox";
+      String[] strs = myString.split("x");
+      List<Integer> a = new ArrayList<>();
+
+    myString.charAt(myString.length() - 1);
+
   }
 
 }
